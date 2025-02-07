@@ -667,6 +667,10 @@ const schemaTypeToIdentifier = ({
       return compiler.keywordTypeNode({
         keyword: 'void',
       });
+    default:
+      return compiler.typeReferenceNode({
+        typeName: schema.type,
+      });
   }
 };
 
